@@ -1,0 +1,112 @@
+/* 1. Reset defaults and setup the dark theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #000; /* Deep black background */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 2. Container sizing */
+.signup-main {
+    width: 100%;
+    max-width: 700px; /* Limits width on desktop */
+}
+
+.header {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* 3. Form Layout */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 4. Style the text/email/password inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff; /* The white underline */
+    color: #fff;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    outline: none;
+    width: 100%;
+}
+
+/* Placeholder styling */
+input::placeholder {
+    color: #fff;
+    opacity: 0.8;
+}
+
+/* 5. Radio and Checkbox Groups */
+.radio-group, 
+.checkbox-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+.radio-group label, 
+.checkbox-group label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Style the small circles/boxes */
+input[type="radio"], 
+input[type="checkbox"] {
+    accent-color: #fff; /* Makes the dot/check white in modern browsers */
+    cursor: pointer;
+}
+
+/* 6. The Signup Button */
+button {
+    width: 160px; /* Specific width from image */
+    padding: 12px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+/* 7. Responsiveness */
+@media (max-width: 480px) {
+    .header {
+        font-size: 2.5rem;
+    }
+    
+    button {
+        width: 100%; /* Full width button on very small screens */
+    }
+}
